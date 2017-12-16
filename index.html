@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,26 +10,31 @@
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js" charset="utf-8"></script>
     <script src="index.js" charset="utf-8"></script>
 </head>
+
 <body>
     <div id="tab">
-        <ul id="tab_btn">
-            <li class="active">选项卡一</li>
-            <li>选项卡二</li>
-            <li>选项卡三</li>
-        </ul>
-
-        <div style="display:block">我是第一个内容</div>
-        <div>我是第二个内容</div>
-        <div>我是第三个内容</div>
+        <div class="tab_header">
+            <ul>
+                <li class="active">选项卡一</li>
+                <li>选项卡二</li>
+                <li>选项卡三</li>
+            </ul>
+        </div>
+        <div class="tab_content">
+            <div class='tab_content_item active'>
+                我是第一个内容
+            </div>
+            <div class='tab_content_item'>
+                我是第二个内容
+            </div>
+            <div class='tab_content_item'>
+                我是第三个内容
+            </div>
+        </div>
     </div>
 </body>
 <script type="text/javascript">
-$('#tab_btn li').on('click', function (){
-    $('#tab_btn li').removeClass('active');
-    $(this).addClass('active');
-
-    $('#tab div').hide();
-    $('#tab div').eq($(this).index()).show();
-})
+    
 </script>
+
 </html>
