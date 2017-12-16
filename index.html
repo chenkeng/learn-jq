@@ -6,13 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
-    <script src="" charset="utf-8"></script>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.js" charset="utf-8"></script>
     <script src="index.js" charset="utf-8"></script>
 </head>
 <body>
-    
+    <div id="tab">
+        <ul id="tab_btn">
+            <li class="active">选项卡一</li>
+            <li>选项卡二</li>
+            <li>选项卡三</li>
+        </ul>
+
+        <div style="display:block">我是第一个内容</div>
+        <div>我是第二个内容</div>
+        <div>我是第三个内容</div>
+    </div>
 </body>
 <script type="text/javascript">
+$('#tab_btn li').on('click', function (){
+    $('#tab_btn li').removeClass('active');
+    $(this).addClass('active');
 
+    $('#tab div').hide();
+    $('#tab div').eq($(this).index()).show();
+})
 </script>
 </html>
