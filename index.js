@@ -6,7 +6,7 @@
             console.log(this);// tab js 对象
             var obj=$(this);
             console.log($(this));// tab  jq 对象
-            $(obj).find('.tab_header li').on("click",function(){
+            $(obj).find('.tab_header li').on(opts.event_type,function(){
                 $(obj).find('.tab_header li').removeClass('active');
                 $(this).addClass('active');
                 console.log($(this));// li 的jq 对象
@@ -17,6 +17,6 @@
     }
 
     $.fn.tab.defaults={
-
+        event_type:"mouseenter", // 可以设置默认为 click ，mouseover， mouseenter 等事件
     };
 })(jQuery);
