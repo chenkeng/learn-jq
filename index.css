@@ -4,7 +4,7 @@
     list-style: none;
 }
 
-#tab {
+.tab {
     width: 600px;
     height: 300px;
     border: 1px solid #ccc;

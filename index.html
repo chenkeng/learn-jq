@@ -12,7 +12,27 @@
 </head>
 
 <body>
-    <div id="tab">
+    <div class="tab">
+        <div class="tab_header">
+            <ul>
+                <li class="active">选项卡一</li>
+                <li>选项卡二</li>
+                <li>选项卡三</li>
+            </ul>
+        </div>
+        <div class="tab_content">
+            <div class='tab_content_item active'>
+                我是第一个内容
+            </div>
+            <div class='tab_content_item'>
+                我是第二个内容
+            </div>
+            <div class='tab_content_item'>
+                我是第三个内容
+            </div>
+        </div>
+    </div>
+    <div class="tab">
         <div class="tab_header">
             <ul>
                 <li class="active">选项卡一</li>
@@ -34,7 +54,9 @@
     </div>
 </body>
 <script type="text/javascript">
-    
+    $(function () {
+        $(".tab").tab()
+    })
 </script>
 
 </html>
