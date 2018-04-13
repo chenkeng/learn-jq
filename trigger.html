@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style>
+        .left {
+            width: auto;
+            height: 150px;
+        }
+
+        .left div {
+            width: 150px;
+            height: 120px;
+            padding: 5px;
+            margin: 5px;
+            float: left;
+            background: #bbffaa;
+            border: 1px solid #ccc;
+        }
+    </style>
+    <script src="https://www.imooc.com/static/lib/jquery/1.9.1/jquery.js"></script>
+</head>
+
+<body>
+    <div class="left">
+    </div>
+
+    <div class="arron">
+        <input class="xx" type="text" value="waiting for change">
+    </div>
+
+    <div class="right"></div>
+    <br/>
+    <input id="slted" type="textarea" value="this is to be selected">
+    <button id='btn'>按钮</button>
+    <script type="text/javascript">
+        $('.xx').trigger('focus'); // 触发input默认的focus事件, input 框高亮
+        // 将一个自己定义的事件 myClick 绑定到 btn 上
+        $("#btn").bind("myClick", function (e, msg1, msg2) {
+            $(".right").append("<p>" + msg1 + "</p>" + "<h1>" + msg2 + "</h1>");
+            console.log(e.type)
+        });
+
+        // 点击的时候，执行一个自定义的事件
+        $("#btn").click(function () {
+            $(this).trigger("myClick", ["我是p标签", "我是h标签"])
+        })
+        // 由于默认页面只能有一个input 选中状态
+        // 加载完页面选中input 的内容
+        $("#slted").trigger('select')
+
+    </script>
+</body>
