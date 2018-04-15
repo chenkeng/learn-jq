@@ -1,2 +1,5 @@
-### write a jquery tab method plugin used for learn the git branch
-  * NOTHING 
+
+[编写jquery插件教程](./编写jquery插件教程.md)  
+
+1. 实例一，编写一个tab选项卡
+2. 实例二， 编写数字水印功能
